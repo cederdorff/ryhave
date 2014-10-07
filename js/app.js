@@ -1,5 +1,5 @@
 'use strict';
-var ryhave = angular.module('ryhave', ['ngRoute']);
+var ryhave = angular.module('ryhave', ['ngRoute', 'duScroll']);
 
 ryhave.config(function($routeProvider, $locationProvider) {
 
@@ -35,3 +35,12 @@ ryhave.controller('NavCtrl', function($scope, $location) {
 ryhave.controller('mainController', function($scope, $location) {
 
 });
+
+ryhave.controller('processController', function($scope, $document){
+    $scope.toTheTop = function() {
+      $document.scrollTopAnimated(0).then(function() { 
+        console && console.log('You just scrolled to the top!');
+      });
+    }
+  }
+).value('duScrollOffset', 154);
