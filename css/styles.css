@@ -246,6 +246,7 @@ a:hover{
 
 .panel-heading {
     cursor: pointer;
+    
 }
 .main-content.ng-enter,
 .main-content.ng-leave {
