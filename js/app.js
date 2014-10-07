@@ -1,5 +1,5 @@
 'use strict';
-var ryhave = angular.module('ryhave', ['ngRoute', 'duScroll']);
+var ryhave = angular.module('ryhave', ['ngRoute', 'duScroll', 'ngAnimate']);
 
 ryhave.config(function($routeProvider, $locationProvider) {
 
