@@ -40,20 +40,20 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li ng-class="{ active: isActive('/processen')}">
-                            <a ng-href="#!/processen" ng-class="{ active: isActive('/processen')}">Processen</a>
+                        <li ng-class="{ active: isActive('/sagsgang')}">
+                            <a ng-href="#!/sagsgang" ng-click="toTheTop()">Sagsgang</a>
                         </li>
                         <li ng-class="{ active: isActive('/om')}">
-                            <a ng-href="#!/om">Om Ryhave</a>
+                            <a ng-href="#!/om" ng-click="toTheTop()">Om Ryhave</a>
                         </li>
                         <li ng-class="{ active: isActive('/pris')}">
-                            <a ng-href="#!/pris">Pris</a>
+                            <a ng-href="#!/pris" ng-click="toTheTop()">Pris</a>
                         </li>
                         <li ng-class="{ active: isActive('/faq')}">
-                            <a ng-href="#!/faq">FAQ</a>
+                            <a ng-href="#!/faq" ng-click="toTheTop()">FAQ</a>
                         </li>
                         <li ng-class="{ active: isActive('/kontakt')}">
-                            <a ng-href="#!/kontakt">Kontakt</a>
+                            <a ng-href="#!/kontakt" ng-click="toTheTop()">Kontakt</a>
                         </li>
                     </ul>
                 </div>
@@ -61,7 +61,7 @@
             </div>
             <!-- /.container -->
         </nav>
-        <div ng-view class="main-content" autoscroll="true"></div>
+        <div ng-view class="main-content"></div>
         <!-- /.banner -->
         <!-- Footer -->
         <footer>

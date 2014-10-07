@@ -6,9 +6,9 @@ ryhave.config(function($routeProvider, $locationProvider) {
   $routeProvider.when('/', {
     templateUrl: 'pages/home.html',
     controller: 'mainController'
-  }).when('/processen', {
-    templateUrl: 'pages/processen.html',
-    controller: 'processController'
+  }).when('/sagsgang', {
+    templateUrl: 'pages/sagsgang.html',
+    controller: 'sagsgangController'
   }).when('/om', {
     templateUrl: 'pages/om.html'
   }).when('/pris', {
@@ -41,7 +41,7 @@ ryhave.controller('mainController', function($scope, $location) {
 
 });
 
-ryhave.controller('processController', function($scope, $document){
+ryhave.controller('sagsgangController', function($scope, $document){
     $scope.toTheTop = function() {
       $document.scrollTopAnimated(0).then(function() { 
         console && console.log('You just scrolled to the top!');
