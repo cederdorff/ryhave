@@ -7,7 +7,8 @@ ryhave.config(function($routeProvider, $locationProvider) {
     templateUrl: 'pages/home.html',
     controller: 'mainController'
   }).when('/processen', {
-    templateUrl: 'pages/processen.html'
+    templateUrl: 'pages/processen.html',
+    controller: 'processController'
   }).when('/om', {
     templateUrl: 'pages/om.html'
   }).when('/pris', {

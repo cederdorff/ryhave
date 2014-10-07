@@ -209,9 +209,13 @@ a:hover{
     text-decoration: none;
 }
 .process{
-    text-align: center;
+    margin-bottom: 35px;
 }
-.process img{
+.process-illu{
+    text-align: center;
+    margin-bottom: 35px;
+}
+.process-illu img{
     max-width: 175px;
     margin: auto;
 }
