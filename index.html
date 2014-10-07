@@ -40,20 +40,20 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li>
+                        <li ng-class="{ active: isActive('/processen')}">
                             <a ng-href="#!/processen" ng-class="{ active: isActive('/processen')}">Processen</a>
                         </li>
-                        <li>
-                            <a ng-href="#!/om" ng-class="{ active: isActive('/om')}">Om Ryhave</a>
+                        <li ng-class="{ active: isActive('/om')}">
+                            <a ng-href="#!/om">Om Ryhave</a>
                         </li>
-                        <li>
-                            <a ng-href="#!/pris" ng-class="{ active: isActive('/pris')}">Pris</a>
+                        <li ng-class="{ active: isActive('/pris')}">
+                            <a ng-href="#!/pris">Pris</a>
                         </li>
-                        <li>
-                            <a ng-href="#!/faq" ng-class="{ active: isActive('/faq')}">FAQ</a>
+                        <li ng-class="{ active: isActive('/faq')}">
+                            <a ng-href="#!/faq">FAQ</a>
                         </li>
-                        <li>
-                            <a ng-href="#!/kontakt" ng-class="{ active: isActive('/kontakt')}">Kontakt</a>
+                        <li ng-class="{ active: isActive('/kontakt')}">
+                            <a ng-href="#!/kontakt">Kontakt</a>
                         </li>
                     </ul>
                 </div>
