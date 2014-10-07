@@ -61,7 +61,7 @@ h1, h2{
     }
 }
 
-/*.navbar-right li a{
+.navbar-right li a{
     background-color: #5F462C;
     margin-right: 3px;
     font-size: 13.5px;
@@ -74,7 +74,7 @@ h1, h2{
 .navbar-right li a:hover, .active{
     background-color: #CFB9A2!important;
     color: #5F462C!important;
-}*/
+}
 .lead {
     font-size: 18px;
     font-weight: 400;
