@@ -31,7 +31,7 @@ h1, h2{
     max-height: 50px;
 }
 .navbar{
-    height: 80px;
+    min-height: 80px;
 }
 .navbar-toggle{
     margin-top: 23px;
@@ -61,7 +61,7 @@ h1, h2{
     }
 }
 
-.navbar-right li a{
+/*.navbar-right li a{
     background-color: #5F462C;
     margin-right: 3px;
     font-size: 13.5px;
@@ -74,6 +74,25 @@ h1, h2{
 .navbar-right li a:hover, .active{
     background-color: #CFB9A2!important;
     color: #5F462C!important;
+}*/
+.navbar-right li a{
+    color: #333333!important;
+    font-weight: 500;
+}
+
+.navbar-right li{
+    margin-left: 2px;
+}
+
+.navbar-right li a:hover{
+    background-color: #e7e7e7!important;
+    border-radius: 4px;
+}
+
+.navbar-right li.active a{
+    background-color: #62462c!important;
+    color:#fff!important;
+    border-radius: 4px;
 }
 .lead {
     font-size: 18px;
@@ -209,7 +228,7 @@ a:hover{
     text-decoration: none;
 }
 .process{
-    margin-bottom: 35px;
+    margin-bottom: 5px;
 }
 .process-illu{
     text-align: center;
@@ -220,6 +239,24 @@ a:hover{
     margin: auto;
 }
 
+.process-illu img:hover{
+    opacity:0.8;
+}
+
 .panel-heading {
     cursor: pointer;
+}
+.main-content.ng-enter,
+.main-content.ng-leave {
+  -webkit-transition:0.5s linear all;
+  transition:0.5s linear all;
+}
+
+.main-content.ng-enter,
+.main-content.ng-leave.ng-leave-active {
+  opacity:0;
+}
+.main-content.ng-leave,
+.main-content.ng-enter.ng-enter-active {
+  opacity:1;
 }

@@ -1,5 +1,5 @@
 'use strict';
-var ryhave = angular.module('ryhave', ['ngRoute']);
+var ryhave = angular.module('ryhave', ['ngRoute', 'duScroll', 'ngAnimate']);
 
 ryhave.config(function($routeProvider, $locationProvider) {
 
@@ -25,13 +25,27 @@ ryhave.config(function($routeProvider, $locationProvider) {
   $locationProvider.hashPrefix('!');
 });
 
-ryhave.controller('NavCtrl', function($scope, $location) {
+ryhave.controller('NavCtrl', function($scope, $location, $document) {
     $scope.isActive = function (viewLocation) { 
       console.log(viewLocation);
         return viewLocation === $location.path();
     };
+    $scope.toTheTop = function() {
+      $document.scrollTopAnimated(0).then(function() { 
+        console && console.log('You just scrolled to the top!');
+      });
+    }
   });
 
 ryhave.controller('mainController', function($scope, $location) {
 
 });
+
+ryhave.controller('processController', function($scope, $document){
+    $scope.toTheTop = function() {
+      $document.scrollTopAnimated(0).then(function() { 
+        console && console.log('You just scrolled to the top!');
+      });
+    }
+  }
+).value('duScrollOffset', 154);
