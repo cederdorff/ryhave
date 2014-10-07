@@ -209,7 +209,7 @@ a:hover{
     text-decoration: none;
 }
 .process{
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 .process-illu{
     text-align: center;
@@ -218,6 +218,10 @@ a:hover{
 .process-illu img{
     max-width: 175px;
     margin: auto;
+}
+
+.process-illu img:hover{
+    opacity:0.8;
 }
 
 .panel-heading {
