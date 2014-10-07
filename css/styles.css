@@ -76,7 +76,8 @@ h1, h2{
     color: #5F462C!important;
 }*/
 .navbar-right li a{
-    color: #62462c!important;
+    color: #333333!important;
+    font-weight: 500;
 }
 
 .navbar-right li{
@@ -84,14 +85,13 @@ h1, h2{
 }
 
 .navbar-right li a:hover{
-    background-color: #cfb9a2!important;
-    color: #5F462C!important;
+    background-color: #e7e7e7!important;
     border-radius: 4px;
 }
 
 .navbar-right li.active a{
     background-color: #62462c!important;
-    color:#cfb9a2!important;
+    color:#fff!important;
     border-radius: 4px;
 }
 .lead {
@@ -228,7 +228,7 @@ a:hover{
     text-decoration: none;
 }
 .process{
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 .process-illu{
     text-align: center;
