@@ -215,3 +215,7 @@ a:hover{
     max-width: 175px;
     margin: auto;
 }
+
+.panel-heading {
+    cursor: pointer;
+}
