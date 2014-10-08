@@ -4,45 +4,42 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="well well-sm">
-				<form class="form-horizontal" method="post">
-					<fieldset>
-						<legend class="text-center header">Send en besked</legend>
-						<div class="form-group">
-							<div class="col-md-10 col-md-offset-1">
-								<input id="fname" name="name" type="text" placeholder="Fornavn" class="form-control">
-							</div>
+				<form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
+					<legend class="text-center header">Send en besked</legend>
+					<div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+						<label for="inputName" class="col-lg-2 control-label">Navn</label>
+						<div class="col-lg-10">
+							<input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="For- og efternavn" required>
 						</div>
-						<div class="form-group">
-							<div class="col-md-10 col-md-offset-1">
-								<input id="lname" name="name" type="text" placeholder="Efternavn" class="form-control">
-							</div>
+					</div>
+					<div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+						<label for="inputEmail" class="col-lg-2 control-label">Email</label>
+						<div class="col-lg-10">
+							<input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Emailadresse" required>
 						</div>
-
-						<div class="form-group">
-							<div class="col-md-10 col-md-offset-1">
-								<input id="email" name="email" type="text" placeholder="Emailadresse" class="form-control">
-							</div>
+					</div>
+					<div class="form-group" ng-class="{ 'has-error': contactform.inputPhone.$invalid && submitted }">
+						<label for="inputPhone" class="col-lg-2 control-label">Telefonnummer</label>
+						<div class="col-lg-10">
+						<input ng-model="formData.inputPhone" type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="Telefonnummer" required>
 						</div>
-
-						<div class="form-group">
-							<div class="col-md-10 col-md-offset-1">
-								<input id="phone" name="phone" type="text" placeholder="Telefonnummer" class="form-control">
-							</div>
+					</div>
+					<div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+						<label for="inputMessage" class="col-lg-2 control-label">Besked</label>
+						<div class="col-lg-10">
+							<textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Indtast venligst en besked. Beskriv hvad du ønsker at få hjælp til, og hvilken ejendom det drejer sig om." required></textarea>
 						</div>
-
-						<div class="form-group">
-							<div class="col-md-10 col-md-offset-1">
-								<textarea class="form-control" id="message" name="message" placeholder="Indtast venligst en besked. Beskriv hvad du ønsker at få hjælp til, og hvilken ejendom det drejer sig om." rows="10"></textarea>
-							</div>
+					</div>
+					<div class="form-group">
+						<div class="col-md-12 text-center">
+							<button type="submit" class="btn btn-primary" ng-disabled="submitButtonDisabled">
+								Send Besked
+							</button>
 						</div>
-
-						<div class="form-group">
-							<div class="col-md-12 text-center">
-								<button type="submit" class="btn btn-primary btn-lg">Send besked</button>
-							</div>
-						</div>
-					</fieldset>
+					</div>
 				</form>
+				<p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+
 			</div>
 		</div>
 		<div class="col-md-6">
