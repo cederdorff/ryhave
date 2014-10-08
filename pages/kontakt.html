@@ -3,7 +3,7 @@
 	<br>
 	<div class="row">
 		<div class="col-md-6">
-			<div class="well well-sm">
+			<div class="well well-sm contact-page-col">
 				<form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="form-horizontal" role="form">
 					<legend class="text-center header">Send en besked</legend>
 					<div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
@@ -21,7 +21,7 @@
 					<div class="form-group" ng-class="{ 'has-error': contactform.inputPhone.$invalid && submitted }">
 						<label for="inputPhone" class="col-lg-2 control-label">Telefon</label>
 						<div class="col-lg-10">
-						<input ng-model="formData.inputPhone" type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="Telefonnummer" required>
+						<input ng-model="formData.inputPhone" type="number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Telefonnummer" required>
 						</div>
 					</div>
 					<div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
@@ -38,15 +38,15 @@
 						</div>
 					</div>
 				</form>
-				<p ng-class="result" style="padding: 15px; margin: 0;">{{ resultMessage }}</p>
+				<p ng-class="result" class="message">{{ resultMessage }}</p>
 
 			</div>
 		</div>
 		<div class="col-md-6">
 			<div>
-				<div class="panel panel-default">
+				<div class="panel panel-default contact-page-col">
 					<div class="panel-body text-center">
-						<iframe width="100%" height="366" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Ryhave%20Sk%C3%B8der%20v%2FJens%20Ryhave%2C%20Jorden%20Rundt%2C%20Grindsted%2C%20Danmark&key=AIzaSyCiIfBr_yuu0pqWq8UF7AdZeFo1bvk1Ksw"></iframe>
+						<iframe width="100%" height="375" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Ryhave%20Sk%C3%B8der%20v%2FJens%20Ryhave%2C%20Jorden%20Rundt%2C%20Grindsted%2C%20Danmark&key=AIzaSyCiIfBr_yuu0pqWq8UF7AdZeFo1bvk1Ksw&zoom=10"></iframe>
 						<h4>Ryhave Skødeskrivning</h4>
 						<h5>v/ Konsulent Jens Ryhave</h5>
 						<address>

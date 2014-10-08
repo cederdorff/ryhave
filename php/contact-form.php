@@ -2,7 +2,7 @@
 header('Content-Type: text/html; charset=utf-8');
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
-require_once 'phpmailer/PHPMailerAutoload.php';
+require_once '../libs/phpmailer/PHPMailerAutoload.php';
 
 if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['inputPhone']) && isset($_POST['inputMessage'])) {
 
@@ -15,10 +15,10 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
 
     //create an instance of PHPMailer
     $mail = new PHPMailer();
-
+    $mail->CharSet = 'UTF-8';
     $mail->From = $_POST['inputEmail'];
     $mail->FromName = $_POST['inputName'];
-    $mail->AddAddress('cederdorff@gmail.com'); //recipient 
+    $mail->AddAddress('jens@ryhave.dk'); //recipient 
     $mail->Subject = "Henvendelse fra ryhave.dk";
     $mail->Body = "Hej Jens. \r\n\r\nDu har modtaget en ny henvendelse fra ryhave.dk \r\n\r\nNavn: " . $_POST['inputName'] . "\r\n\r\nEmail: " . $_POST['inputEmail'] . "\r\n\r\nTelefonnummer: " . $_POST['inputPhone'] . "\r\n\r\nBesked: " . stripslashes($_POST['inputMessage']);
 
@@ -32,7 +32,7 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
         exit;
     }
 
-    $data = array('success' => true, 'message' => 'Tak! Din besked er nu send, og jeg vil vende tilbage til dig hurtigst muligt.');
+    $data = array('success' => true, 'message' => 'Tak! Din besked er send. Jeg vender tilbage hurtigst muligt.');
     echo json_encode($data);
 
 } else {
