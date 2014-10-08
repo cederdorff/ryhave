@@ -27,8 +27,8 @@ p {
 .logo {
     max-height: 50px;
 }
-.navbar {
-    min-height: 80px;
+.navbar-brand {
+    margin-bottom: 30px;
 }
 .navbar-toggle {
     margin-top: 23px;
@@ -249,10 +249,8 @@ a:hover {
     color: #333333;
 }
 /*hide step in input number*/
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    /* display: none; <- Crashes Chrome on hover */
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
