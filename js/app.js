@@ -54,7 +54,7 @@ ryhave.controller('sagsgangController', function($scope, $document){
     });
   }
 }
-).value('duScrollOffset', 154);
+).value('duScrollOffset', 144);
 
 ryhave.controller('contactController', function ($scope, $http) {
   $scope.result = 'hidden'
