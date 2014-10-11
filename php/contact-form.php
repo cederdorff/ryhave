@@ -32,7 +32,7 @@ if (isset($_POST['inputName']) && isset($_POST['inputEmail']) && isset($_POST['i
         exit;
     }
 
-    $data = array('success' => true, 'message' => 'Tak! Din besked er send. Jeg vender tilbage hurtigst muligt.');
+    $data = array('success' => true, 'message' => 'Tak! Din besked er sendt. Jeg vender tilbage hurtigst muligt.');
     echo json_encode($data);
 
 } else {

@@ -50,6 +50,7 @@ p {
  }
  .navbar-header{
   width: 100%;
+  height: 74px;
 }
 .navbar {
   height: 145px;
@@ -59,38 +60,58 @@ p {
 }
 .navbar-right{
   margin-right: 0!important;
-  margin-top: 10px;
 }
+}
+
+.navbar-right.visible-xs li{
+  margin: 2px;
 }
 .navbar-right li a,
-.navbar-right .btn-primary  {
-  color: #333333;
-  background-color: #eeeeee;
-  border-color: #e2e2e2;
+.btn-primary  {
+  color: #ffffff!important;
+  background-color: #093F5B;
+  border-color: #073349;
+/*  color: #ffffff;
+background-color: #158cba;
+border-color: #127ba3;*/
 }
-.navbar-right li a:hover {
-  color: #555555;
-  background-color: #d5d5d5;
-  border-color: #c3c3c3;
-}
-.navbar-right.btn-group{
 
-}
-.navbar-right.btn-group .btn{
-  padding: 17px 10px;
-  letter-spacing: 1px;
+.btn-oval{
+  border: none;
+  border-radius: 90px / 60px; 
+  width: 73px;
+  height: 47px;
+  padding: 15px 0px;
+  font-size: 11px;
+  font-weight: 400;
 }
 @media(min-width: 992px) {
-  .navbar-right.btn-group .btn{
-    padding: 17px 20px;
-    letter-spacing: 2px;
+  .btn-oval{
+    border-radius: 120px / 60px; 
+    width: 100px;
+    height: 50px;
+    padding: 16px 0px;
+    font-size: 12px;
+  font-weight: 400;
+    letter-spacing: 1px;
   }
 }
-@media(min-width: 1200px) {
-  .navbar-right.btn-group .btn{
-    padding: 17px 25px;
-  }
+
+.navbar-right li a:hover,
+.navbar-right li a:active,
+.navbar-right li a.active, 
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary
+ {
+  color: #ffffff;
+  background-color: #106a8c!important;
+  border-color: #0c516c!important;
 }
+
+
 /*.navbar-right li {
   margin-left: 2px;
 }
@@ -211,7 +232,7 @@ p {
 }
 footer {
   padding: 50px 0;
-  background-color: #f8f8f8;
+  background-color: #f3f3f3;
 }
 
 @media(max-width: 767px) {
@@ -244,11 +265,11 @@ a:hover {
 .process-illu img:hover {
   opacity: 0.8;
 }
-  .process-images {
-    max-height: 130px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.process-images {
+  max-height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
 @media(min-width: 768px) {
   .process-images {
     margin-top: 83px;
